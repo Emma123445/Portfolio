@@ -61,6 +61,11 @@ body{
     color: var(--text-color);
     display: none;
 }
+#menu-icon:hover {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
 .Accueil{
     display: flex;
     justify-content: space-between;
@@ -70,11 +75,11 @@ body{
 }
 .Accueil-img{
     content: "";
-    top: -1Opx;
+    top: -10px;
     left: -10px;
     right: -10px;
     bottom: -10px;
-    background: radial-gradient(circle, rgba(0, 150, 255, 0, 5), transparent);
+    background: radial-gradient(circle, rgba(0, 150, 255, 0.5), transparent);
     border-radius: 5%;
     opacity: 0;
     animation: glow 2s infinite alternate;
@@ -240,6 +245,11 @@ span{
     font-size: 1.6rem;
     margin: 1rem;
 }
+.services-box .btn {
+    margin-top: 1rem;
+    display: inline-block;
+}
+
 
 /* portfolio */
 .Portfolio{
@@ -281,7 +291,7 @@ span{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient( rgba(0, 0, 0, -1), var(--main-color) );
+    background: linear-gradient(rgba(0, 0, 0, 0.5), var(--main-color));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -426,19 +436,26 @@ span{
         background: var(--bg-color);
         border-top: .1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        transition: all 0.3s ease-in-out;
         display: none; 
     }
-
     .navbar .active {
         display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .navbar a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
     }
-    .Accueil{
+    #Accueil{
+        display: flex;
         flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        /* gap: 10px; */
     }
     .Accueil-content h3 {
         font-size: 2.6rem;
@@ -467,15 +484,27 @@ span{
     .Portfolio h2{
         margin-bottom: 3rem;
     }
-    .portfolio-container{
+    /* .portfolio-container{
         grid-template-columns: repeat(2,1fr);
-    }
+    } */
 
 }
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 @media(max-width: 620px) {
     .portfolio-container {
         grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 500px) {
+    .Apropos-img img {
+        width: 80%;
+        max-width: 300px;
     }
 }
 

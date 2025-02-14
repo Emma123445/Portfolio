@@ -25,8 +25,10 @@ window.onscroll = () => {
     header.classList.toggle('sticky', window.scrollY > 100);
     
     /////////////////// REMOVE toggle et navbar au click//////////////////////////////////////////////////////////////////////////
-    menuIcon.classList.remove('fa-solid fa-xmark');
+    menuIcon.classList.remove('fa-xmark');
+    menuIcon.classList.add('fa-bars');
     navbar.classList.remove('active');
+
 
 
 };
@@ -35,6 +37,6 @@ let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
-    menuIcon.classList.toggle('fa-solid fa-xmark');
+    menuIcon.classList.toggle('fa-xmark');
     navbar.classList.toggle('active');
 };
